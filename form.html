@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>web</title>
+<script src="D:\angular\angular.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.n = "NAME";
+    $scope.A = "ADDRESS";
+});
+
+
+</script>
+</head>
+<body ng-app="myApp"> 
+<div ng-controller="myCtrl">
+<form>
+<b>NAME:<br><br>
+<input type="text" name="NAME" maxlength="25" required="required" ng-model="name"><br><br></b>
+<b>ADDRESS:<br><br>
+<textarea name="ADDRESS" rows="5" cols="50" ng-model="address"></textarea><br><br></b>
+<h1> {{n}} {{name}} </h1>
+<h2> {{A}}  {{address}} </h2>
+<b>GENDER:<br><br></b>
+<b><input type="radio" name="GENDER" value="Female">Female<br><br></b>
+<b><input type="radio" name="GENDER" value="Male">Male<br><br></b>
+<b>SELECT COUNTRY:<br><br></b>
+<select name="SELECT COUNTRY"><br><br></b>
+<option value="India">India</option>
+<option value="US">US</option>
+<option value="others">Others</option>
+</select><br><br>
+<b>SELECT DEPARTMENT:<br><br></b>
+<select name="SELECT DEPARTMENTS"><br><br></b>
+<option value="CSE">CSE</option>
+<option value="ECE">ECE</option>
+<option value="IT">IT</option>
+<option value="CIVIL">CIVIL</option>
+<option value="AERO">AERO</option>
+<option value="MECH">MECH</option>
+</select><br><br>
+<b>SELECT COURSEPAPER:<br><br></b>
+<select name="SELECT COURSEPAPERS"><br><br></b>
+<option value="java">java</option>
+<option value="MEAN stack">MEAN stack</option>
+<option value="Data structures">Data structures</option>
+<option value="Business Development">Business Development</option>
+<option value="Machine learning">Machine learning</option>
+</select><br><br>
+<br><br>
+<b><input type="SUBMIT" name="NEXT" value="NEXT"></b>
+</div>
+</form>
+</body>
+</html>
